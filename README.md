@@ -1,5 +1,4 @@
 #Postcode API
-===========
 
 An Objective-C API wrapper for http://api.postcodeapi.nu
 
