@@ -5,7 +5,7 @@ An Objective-C API wrapper for http://api.postcodeapi.nu. This wrapper allows yo
 Implements all methods as described in http://api.postcodeapi.nu/docs/ also returns optional BAG information.
 
 #Usage:
-```
+```objc
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
