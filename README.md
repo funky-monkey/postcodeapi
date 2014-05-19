@@ -1,6 +1,6 @@
 #Postcode API
 
-An Objective-C API wrapper for http://api.postcodeapi.nu
+An Objective-C API wrapper for http://api.postcodeapi.nu. This wrapper allows you to lookup Dutch postcodes to street and city names or lat-long regions.
 
 Implements all methods as described in http://api.postcodeapi.nu/docs/ also returns optional BAG information.
 
