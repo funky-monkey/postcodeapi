@@ -3,10 +3,10 @@
 
 An Objective-C API wrapper for http://api.postcodeapi.nu
 
-Implements all methods as described in http://api.postcodeapi.nu/docs/ also returns BAG information.
+Implements all methods as described in http://api.postcodeapi.nu/docs/ also returns optional BAG information.
 
 #Usage:
-'''
+```
 PostcodeAPI *pc = [[PostcodeAPI alloc] initWithAPIKey:@"[Insert your API key]"];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotResult:) name:kResultNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotError:) name:kErrorNotification object:nil];
@@ -25,7 +25,7 @@ PostcodeAPI *pc = [[PostcodeAPI alloc] initWithAPIKey:@"[Insert your API key]"];
 {
 	NSLog(@"Error: %@", notification.userInfo[kParseErrorObject]);
 }
-'''
+```
 
 BEWARE!
 This is raw unrefactored code, needs shoepolish.
