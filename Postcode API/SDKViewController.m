@@ -33,7 +33,7 @@
 	CLLocationDegrees lon = 5.07718;
 	CLLocation *fakeLocation = [[CLLocation alloc] initWithLatitude:lat longitude:lon];
 
-	PostcodeAPI *pc = [[PostcodeAPI alloc] initWithAPIKey:@"764b819cec504b3df788a25bbf7ae6d9f899e9a6"];
+	PostcodeAPI *pc = [[PostcodeAPI alloc] initWithAPIKey:@"[Your API Key here]"];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotResult:) name:kResultNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotError:) name:kErrorNotification object:nil];
 //	[pc requestAddressWithPostcode:@"1021NG" withBAG:YES];
