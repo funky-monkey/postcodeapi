@@ -7,12 +7,16 @@ Implements all methods as described in http://api.postcodeapi.nu/docs/ also retu
 
 #Usage:
 ```
-PostcodeAPI *pc = [[PostcodeAPI alloc] initWithAPIKey:@"[Insert your API key]"];
+- (void)viewDidLoad
+{
+	[super viewDidLoad];
+
+	PostcodeAPI *pc = [[PostcodeAPI alloc] initWithAPIKey:@"[Insert your API key]"];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotResult:) name:kResultNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotError:) name:kErrorNotification object:nil];
+    	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotError:) name:kErrorNotification object:nil];
   	[pc requestAddressWithPostcode:@"1000AB" withBAG:YES];
-    //[pc requestAddressWithPostcode:@"1000AB" withHouseNumber:12 withBAG:YES];
-    //[pc requestWGS84WithLatLong:fakeLocation withBAG:YES];
+	//[pc requestAddressWithPostcode:@"1000AB" withHouseNumber:12 withBAG:YES];
+	//[pc requestWGS84WithLatLong:fakeLocation withBAG:YES];
 }
 
 - (void)gotResult:(NSNotification *)notification
