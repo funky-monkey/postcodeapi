@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B815603E1924EC6000A15CD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B815603D1924EC6000A15CD9 /* Foundation.framework */; };
+		B81560401924EC6000A15CD9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B815603F1924EC6000A15CD9 /* CoreGraphics.framework */; };
+		B81560421924EC6000A15CD9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B81560411924EC6000A15CD9 /* UIKit.framework */; };
+		B81560481924EC6000A15CD9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B81560461924EC6000A15CD9 /* InfoPlist.strings */; };
+		B815604A1924EC6000A15CD9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B81560491924EC6000A15CD9 /* main.m */; };
+		B815604E1924EC6000A15CD9 /* SDKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B815604D1924EC6000A15CD9 /* SDKAppDelegate.m */; };
+		B81560511924EC6000A15CD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B815604F1924EC6000A15CD9 /* Main.storyboard */; };
+		B81560541924EC6000A15CD9 /* SDKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B81560531924EC6000A15CD9 /* SDKViewController.m */; };
+		B81560561924EC6000A15CD9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B81560551924EC6000A15CD9 /* Images.xcassets */; };
+		B815605D1924EC6000A15CD9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B815605C1924EC6000A15CD9 /* XCTest.framework */; };
+		B815605E1924EC6000A15CD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B815603D1924EC6000A15CD9 /* Foundation.framework */; };
+		B815605F1924EC6000A15CD9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B81560411924EC6000A15CD9 /* UIKit.framework */; };
+		B81560671924EC6000A15CD9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B81560651924EC6000A15CD9 /* InfoPlist.strings */; };
+		B81560691924EC6000A15CD9 /* Postcode_APITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B81560681924EC6000A15CD9 /* Postcode_APITests.m */; };
+		B81560791924EDE800A15CD9 /* SDKAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B81560731924EDE800A15CD9 /* SDKAPIManager.m */; };
+		B815607B1924EDE800A15CD9 /* SDKParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B81560771924EDE800A15CD9 /* SDKParser.m */; };
+		B88710741926565F004F96CD /* P4PostcodeResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B88710731926565F004F96CD /* P4PostcodeResponse.m */; };
+		B8871077192659D2004F96CD /* WGS84Response.m in Sources */ = {isa = PBXBuildFile; fileRef = B8871076192659D2004F96CD /* WGS84Response.m */; };
+		B887107A19265BE6004F96CD /* AdresResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B887107919265BE6004F96CD /* AdresResponse.m */; };
+		B887107D19265CAA004F96CD /* PostcodeBAG.m in Sources */ = {isa = PBXBuildFile; fileRef = B887107C19265CAA004F96CD /* PostcodeBAG.m */; };
+		B8996D521924F79600693586 /* PostcodeAPIConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B8996D511924F79600693586 /* PostcodeAPIConstants.m */; };
+		B8996D561924F9AF00693586 /* PostcodeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = B8996D551924F9AF00693586 /* PostcodeAPI.m */; };
+		B8996D59192500AA00693586 /* PostcodeResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B8996D58192500AA00693586 /* PostcodeResponse.m */; };
+		FAB1AA0383B64278AD7BC4E5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D915614F7F4CA9A7C6BDE9 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B81560601924EC6000A15CD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B81560321924EC6000A15CD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B81560391924EC6000A15CD9;
+			remoteInfo = "Postcode API";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		71D915614F7F4CA9A7C6BDE9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B815603A1924EC6000A15CD9 /* Postcode API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Postcode API.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B815603D1924EC6000A15CD9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B815603F1924EC6000A15CD9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B81560411924EC6000A15CD9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B81560451924EC6000A15CD9 /* Postcode API-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Postcode API-Info.plist"; sourceTree = "<group>"; };
+		B81560471924EC6000A15CD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B81560491924EC6000A15CD9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B815604B1924EC6000A15CD9 /* Postcode API-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Postcode API-Prefix.pch"; sourceTree = "<group>"; };
+		B815604C1924EC6000A15CD9 /* SDKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDKAppDelegate.h; sourceTree = "<group>"; };
+		B815604D1924EC6000A15CD9 /* SDKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDKAppDelegate.m; sourceTree = "<group>"; };
+		B81560501924EC6000A15CD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B81560521924EC6000A15CD9 /* SDKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDKViewController.h; sourceTree = "<group>"; };
+		B81560531924EC6000A15CD9 /* SDKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDKViewController.m; sourceTree = "<group>"; };
+		B81560551924EC6000A15CD9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B815605B1924EC6000A15CD9 /* Postcode APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Postcode APITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B815605C1924EC6000A15CD9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B81560641924EC6000A15CD9 /* Postcode APITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Postcode APITests-Info.plist"; sourceTree = "<group>"; };
+		B81560661924EC6000A15CD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B81560681924EC6000A15CD9 /* Postcode_APITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Postcode_APITests.m; sourceTree = "<group>"; };
+		B81560721924EDE800A15CD9 /* SDKAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDKAPIManager.h; path = API/SDKAPIManager.h; sourceTree = "<group>"; };
+		B81560731924EDE800A15CD9 /* SDKAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDKAPIManager.m; path = API/SDKAPIManager.m; sourceTree = "<group>"; };
+		B81560761924EDE800A15CD9 /* SDKParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDKParser.h; path = API/SDKParser.h; sourceTree = "<group>"; };
+		B81560771924EDE800A15CD9 /* SDKParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDKParser.m; path = API/SDKParser.m; sourceTree = "<group>"; };
+		B81560781924EDE800A15CD9 /* SDKParsingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDKParsingProtocol.h; path = API/SDKParsingProtocol.h; sourceTree = "<group>"; };
+		B88710721926565F004F96CD /* P4PostcodeResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = P4PostcodeResponse.h; path = API/P4PostcodeResponse.h; sourceTree = "<group>"; };
+		B88710731926565F004F96CD /* P4PostcodeResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = P4PostcodeResponse.m; path = API/P4PostcodeResponse.m; sourceTree = "<group>"; };
+		B8871075192659D2004F96CD /* WGS84Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WGS84Response.h; path = API/WGS84Response.h; sourceTree = "<group>"; };
+		B8871076192659D2004F96CD /* WGS84Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WGS84Response.m; path = API/WGS84Response.m; sourceTree = "<group>"; };
+		B887107819265BE6004F96CD /* AdresResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdresResponse.h; path = API/AdresResponse.h; sourceTree = "<group>"; };
+		B887107919265BE6004F96CD /* AdresResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdresResponse.m; path = API/AdresResponse.m; sourceTree = "<group>"; };
+		B887107B19265CAA004F96CD /* PostcodeBAG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostcodeBAG.h; sourceTree = "<group>"; };
+		B887107C19265CAA004F96CD /* PostcodeBAG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostcodeBAG.m; sourceTree = "<group>"; };
+		B8996D501924F79600693586 /* PostcodeAPIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostcodeAPIConstants.h; path = API/PostcodeAPIConstants.h; sourceTree = "<group>"; };
+		B8996D511924F79600693586 /* PostcodeAPIConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostcodeAPIConstants.m; path = API/PostcodeAPIConstants.m; sourceTree = "<group>"; };
+		B8996D541924F9AF00693586 /* PostcodeAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostcodeAPI.h; sourceTree = "<group>"; };
+		B8996D551924F9AF00693586 /* PostcodeAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostcodeAPI.m; sourceTree = "<group>"; };
+		B8996D57192500AA00693586 /* PostcodeResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostcodeResponse.h; path = API/PostcodeResponse.h; sourceTree = "<group>"; };
+		B8996D58192500AA00693586 /* PostcodeResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostcodeResponse.m; path = API/PostcodeResponse.m; sourceTree = "<group>"; };
+		C67F24F344D840068A7D6E90 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B81560371924EC6000A15CD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B81560401924EC6000A15CD9 /* CoreGraphics.framework in Frameworks */,
+				B81560421924EC6000A15CD9 /* UIKit.framework in Frameworks */,
+				B815603E1924EC6000A15CD9 /* Foundation.framework in Frameworks */,
+				FAB1AA0383B64278AD7BC4E5 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B81560581924EC6000A15CD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B815605D1924EC6000A15CD9 /* XCTest.framework in Frameworks */,
+				B815605F1924EC6000A15CD9 /* UIKit.framework in Frameworks */,
+				B815605E1924EC6000A15CD9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B81560311924EC6000A15CD9 = {
+			isa = PBXGroup;
+			children = (
+				B81560431924EC6000A15CD9 /* Postcode API */,
+				B81560621924EC6000A15CD9 /* Postcode APITests */,
+				B815603C1924EC6000A15CD9 /* Frameworks */,
+				B815603B1924EC6000A15CD9 /* Products */,
+				C67F24F344D840068A7D6E90 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		B815603B1924EC6000A15CD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B815603A1924EC6000A15CD9 /* Postcode API.app */,
+				B815605B1924EC6000A15CD9 /* Postcode APITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B815603C1924EC6000A15CD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B815603D1924EC6000A15CD9 /* Foundation.framework */,
+				B815603F1924EC6000A15CD9 /* CoreGraphics.framework */,
+				B81560411924EC6000A15CD9 /* UIKit.framework */,
+				B815605C1924EC6000A15CD9 /* XCTest.framework */,
+				71D915614F7F4CA9A7C6BDE9 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B81560431924EC6000A15CD9 /* Postcode API */ = {
+			isa = PBXGroup;
+			children = (
+				B815607C1924EDF300A15CD9 /* API */,
+				B815604C1924EC6000A15CD9 /* SDKAppDelegate.h */,
+				B815604D1924EC6000A15CD9 /* SDKAppDelegate.m */,
+				B815604F1924EC6000A15CD9 /* Main.storyboard */,
+				B81560521924EC6000A15CD9 /* SDKViewController.h */,
+				B81560531924EC6000A15CD9 /* SDKViewController.m */,
+				B81560551924EC6000A15CD9 /* Images.xcassets */,
+				B81560441924EC6000A15CD9 /* Supporting Files */,
+			);
+			path = "Postcode API";
+			sourceTree = "<group>";
+		};
+		B81560441924EC6000A15CD9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B81560451924EC6000A15CD9 /* Postcode API-Info.plist */,
+				B81560461924EC6000A15CD9 /* InfoPlist.strings */,
+				B81560491924EC6000A15CD9 /* main.m */,
+				B815604B1924EC6000A15CD9 /* Postcode API-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B81560621924EC6000A15CD9 /* Postcode APITests */ = {
+			isa = PBXGroup;
+			children = (
+				B81560681924EC6000A15CD9 /* Postcode_APITests.m */,
+				B81560631924EC6000A15CD9 /* Supporting Files */,
+			);
+			path = "Postcode APITests";
+			sourceTree = "<group>";
+		};
+		B81560631924EC6000A15CD9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B81560641924EC6000A15CD9 /* Postcode APITests-Info.plist */,
+				B81560651924EC6000A15CD9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B815607C1924EDF300A15CD9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B8996D541924F9AF00693586 /* PostcodeAPI.h */,
+				B8996D551924F9AF00693586 /* PostcodeAPI.m */,
+				B8996D5A192500C700693586 /* DTO */,
+				B8996D501924F79600693586 /* PostcodeAPIConstants.h */,
+				B8996D511924F79600693586 /* PostcodeAPIConstants.m */,
+				B81560721924EDE800A15CD9 /* SDKAPIManager.h */,
+				B81560731924EDE800A15CD9 /* SDKAPIManager.m */,
+				B81560761924EDE800A15CD9 /* SDKParser.h */,
+				B81560771924EDE800A15CD9 /* SDKParser.m */,
+				B81560781924EDE800A15CD9 /* SDKParsingProtocol.h */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		B8996D5A192500C700693586 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				B88710721926565F004F96CD /* P4PostcodeResponse.h */,
+				B88710731926565F004F96CD /* P4PostcodeResponse.m */,
+				B8996D57192500AA00693586 /* PostcodeResponse.h */,
+				B8996D58192500AA00693586 /* PostcodeResponse.m */,
+				B8871075192659D2004F96CD /* WGS84Response.h */,
+				B8871076192659D2004F96CD /* WGS84Response.m */,
+				B887107819265BE6004F96CD /* AdresResponse.h */,
+				B887107919265BE6004F96CD /* AdresResponse.m */,
+				B887107B19265CAA004F96CD /* PostcodeBAG.h */,
+				B887107C19265CAA004F96CD /* PostcodeBAG.m */,
+			);
+			name = DTO;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B81560391924EC6000A15CD9 /* Postcode API */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B815606C1924EC6000A15CD9 /* Build configuration list for PBXNativeTarget "Postcode API" */;
+			buildPhases = (
+				BF4D31847ABC4C77B8CAD97D /* Check Pods Manifest.lock */,
+				B81560361924EC6000A15CD9 /* Sources */,
+				B81560371924EC6000A15CD9 /* Frameworks */,
+				B81560381924EC6000A15CD9 /* Resources */,
+				E0561550BEA947189A1CDB31 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Postcode API";
+			productName = "Postcode API";
+			productReference = B815603A1924EC6000A15CD9 /* Postcode API.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B815605A1924EC6000A15CD9 /* Postcode APITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B815606F1924EC6000A15CD9 /* Build configuration list for PBXNativeTarget "Postcode APITests" */;
+			buildPhases = (
+				B81560571924EC6000A15CD9 /* Sources */,
+				B81560581924EC6000A15CD9 /* Frameworks */,
+				B81560591924EC6000A15CD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B81560611924EC6000A15CD9 /* PBXTargetDependency */,
+			);
+			name = "Postcode APITests";
+			productName = "Postcode APITests";
+			productReference = B815605B1924EC6000A15CD9 /* Postcode APITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B81560321924EC6000A15CD9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SDK;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Funky Monkey";
+				TargetAttributes = {
+					B815605A1924EC6000A15CD9 = {
+						TestTargetID = B81560391924EC6000A15CD9;
+					};
+				};
+			};
+			buildConfigurationList = B81560351924EC6000A15CD9 /* Build configuration list for PBXProject "Postcode API" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B81560311924EC6000A15CD9;
+			productRefGroup = B815603B1924EC6000A15CD9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B81560391924EC6000A15CD9 /* Postcode API */,
+				B815605A1924EC6000A15CD9 /* Postcode APITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B81560381924EC6000A15CD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B81560561924EC6000A15CD9 /* Images.xcassets in Resources */,
+				B81560481924EC6000A15CD9 /* InfoPlist.strings in Resources */,
+				B81560511924EC6000A15CD9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B81560591924EC6000A15CD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B81560671924EC6000A15CD9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BF4D31847ABC4C77B8CAD97D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E0561550BEA947189A1CDB31 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B81560361924EC6000A15CD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8996D59192500AA00693586 /* PostcodeResponse.m in Sources */,
+				B815604A1924EC6000A15CD9 /* main.m in Sources */,
+				B8871077192659D2004F96CD /* WGS84Response.m in Sources */,
+				B887107D19265CAA004F96CD /* PostcodeBAG.m in Sources */,
+				B81560541924EC6000A15CD9 /* SDKViewController.m in Sources */,
+				B815604E1924EC6000A15CD9 /* SDKAppDelegate.m in Sources */,
+				B8996D561924F9AF00693586 /* PostcodeAPI.m in Sources */,
+				B81560791924EDE800A15CD9 /* SDKAPIManager.m in Sources */,
+				B8996D521924F79600693586 /* PostcodeAPIConstants.m in Sources */,
+				B887107A19265BE6004F96CD /* AdresResponse.m in Sources */,
+				B88710741926565F004F96CD /* P4PostcodeResponse.m in Sources */,
+				B815607B1924EDE800A15CD9 /* SDKParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B81560571924EC6000A15CD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B81560691924EC6000A15CD9 /* Postcode_APITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B81560611924EC6000A15CD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B81560391924EC6000A15CD9 /* Postcode API */;
+			targetProxy = B81560601924EC6000A15CD9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B81560461924EC6000A15CD9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B81560471924EC6000A15CD9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B815604F1924EC6000A15CD9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B81560501924EC6000A15CD9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B81560651924EC6000A15CD9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B81560661924EC6000A15CD9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B815606A1924EC6000A15CD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B815606B1924EC6000A15CD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B815606D1924EC6000A15CD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C67F24F344D840068A7D6E90 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Postcode API/Postcode API-Prefix.pch";
+				INFOPLIST_FILE = "Postcode API/Postcode API-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B815606E1924EC6000A15CD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C67F24F344D840068A7D6E90 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Postcode API/Postcode API-Prefix.pch";
+				INFOPLIST_FILE = "Postcode API/Postcode API-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B81560701924EC6000A15CD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Postcode API.app/Postcode API";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Postcode API/Postcode API-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Postcode APITests/Postcode APITests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B81560711924EC6000A15CD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Postcode API.app/Postcode API";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Postcode API/Postcode API-Prefix.pch";
+				INFOPLIST_FILE = "Postcode APITests/Postcode APITests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B81560351924EC6000A15CD9 /* Build configuration list for PBXProject "Postcode API" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B815606A1924EC6000A15CD9 /* Debug */,
+				B815606B1924EC6000A15CD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B815606C1924EC6000A15CD9 /* Build configuration list for PBXNativeTarget "Postcode API" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B815606D1924EC6000A15CD9 /* Debug */,
+				B815606E1924EC6000A15CD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B815606F1924EC6000A15CD9 /* Build configuration list for PBXNativeTarget "Postcode APITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B81560701924EC6000A15CD9 /* Debug */,
+				B81560711924EC6000A15CD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B81560321924EC6000A15CD9 /* Project object */;
+}
