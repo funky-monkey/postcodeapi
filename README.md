@@ -4,29 +4,47 @@ An Objective-C API wrapper for http://api.postcodeapi.nu. This wrapper allows yo
 
 Implements all methods as described in http://api.postcodeapi.nu/docs/ also returns optional BAG information.
 
+This API now support a blockbased API for success and failure handling.
+
 #Usage:
 ```objc
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
 
+    CLLocationDegrees lat = 51.5664;
+	CLLocationDegrees lon = 5.07718;
+	CLLocation *fakeLocation = [[CLLocation alloc] initWithLatitude:lat longitude:lon];
+
 	PostcodeAPI *pc = [[PostcodeAPI alloc] initWithAPIKey:@"[Insert your API key]"];
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotResult:) name:kResultNotification object:nil];
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotError:) name:kErrorNotification object:nil];
-  	[pc requestAddressWithPostcode:@"1000AB" withBAG:YES];
-	//[pc requestAddressWithPostcode:@"1000AB" withHouseNumber:12 withBAG:YES];
-	//[pc requestWGS84WithLatLong:fakeLocation withBAG:YES];
-}
+    
+    // Vanilla request for adres with postcode
+    [pc requestAddressWithPostcode:@"1021NG" withBAG:YES
+                       success: ^(id responseObject) {
+                            PostcodeResponse *po = responseObject;
+                            NSLog(@"po.description: %@", po);
+                    } failure: ^(NSError *error) {
+                            NSLog(@"Error: %@", error);
+                    }];
 
-- (void)gotResult:(NSNotification *)notification
-{
-	PostcodeResponse *po = notification.userInfo[kParseResultObject];
-	NSLog(@"po.description: %@", po);
-}
-
-- (void)gotError:(NSNotification *)notification
-{
-	NSLog(@"Error: %@", notification.userInfo[kParseErrorObject]);
+    // Request Adres with postcode and BAG info
+	[pc requestAddressWithPostcode:@"1021NG" withHouseNumber:58 withBAG:YES
+	                       success: ^(id responseObject) {
+                                PostcodeResponse *po = responseObject;
+                                NSLog(@"po.description: %@", po);
+                        } failure: ^(NSError *error) {
+                                NSLog(@"Error: %@", error);
+                            }];
+                            
+    // Request WGS84 with CLLocation and BAG
+    [pc requestWGS84WithLatLong:fakeLocation withBAG:YES
+                        success:^(id responseObject) {
+                            PostcodeResponse *po = responseObject;
+                            NSLog(@"po.description: %@", po);
+                        } failure:^(NSError *error) {
+                            NSLog(@"Error: %@", error);
+                            
+                        }];
 }
 ```
 
