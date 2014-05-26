@@ -19,10 +19,6 @@
 
 @implementation PostcodeAPI
 
-NSString *_postCode;
-CLLocation *_location;
-NSInteger _houseNumber;
-
 - (id)initWithAPIKey:(NSString *)apikey
 {
 	if (self = [super init]) {
@@ -51,7 +47,7 @@ NSInteger _houseNumber;
 	Class classToParse;
 
 	if (postCode) {
-		_postCode = ((postCode) ? postCode : @"");
+		postCode = ((postCode) ? postCode : @"");
 		
         if ([postCode length] == 4) {
 			[paramObject setObject:@"p4" forKey:@"type"];
@@ -69,15 +65,13 @@ NSInteger _houseNumber;
 	}
 
 	if (houseNumber) {
-		_houseNumber = (houseNumber == 0) ? : houseNumber;
+		houseNumber = (houseNumber == 0) ? : houseNumber;
 		path = [NSString stringWithFormat:@"%@/%ld", postCode, (long)houseNumber];
 		classToParse = [PostcodeResponse class];
 	}
 
 	if (latlong) {
-		_location = latlong;
-		path = [NSString stringWithFormat:@"%@/%f,%f", @"wgs84", _location.coordinate.latitude, _location.coordinate.longitude];
-
+		path = [NSString stringWithFormat:@"%@/%f,%f", @"wgs84", latlong.coordinate.latitude, latlong.coordinate.longitude];
 		classToParse = [WGS84Response class];
 	}
     
