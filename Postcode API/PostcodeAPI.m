@@ -44,10 +44,6 @@ NSInteger _houseNumber;
 	[self makeAPICall:nil withHouseNumber:0 withLatLong:latlong withBAG:bag];
 }
 
-- (void)type:(NSString *)value
-{
-}
-
 - (void)makeAPICall:(NSString *)postCode withHouseNumber:(NSInteger)houseNumber withLatLong:(CLLocation *)latlong withBAG:(BOOL)bag;
 {
 	NSMutableDictionary *paramObject = [[NSMutableDictionary alloc]init];
