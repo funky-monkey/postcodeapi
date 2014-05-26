@@ -27,20 +27,24 @@
 	return self;
 }
 
-- (void)requestAddressWithPostcode:(NSString *)postcode withBAG:(BOOL)bag;
+- (void)requestAddressWithPostcode:(NSString *)postcode withBAG:(BOOL)bag success:(void (^)(id responseObject))success
+                           failure:(void (^)(NSError *error))failure;
 {
-	[self makeAPICall:postcode withHouseNumber:0 withLatLong:nil withBAG:bag];
+	[self makeAPICall:postcode withHouseNumber:0 withLatLong:nil withBAG:bag success:success failure:failure];
 }
-- (void)requestAddressWithPostcode:(NSString *)postcode withHouseNumber:(NSInteger)houseNumber withBAG:(BOOL)bag;
+- (void)requestAddressWithPostcode:(NSString *)postcode withHouseNumber:(NSInteger)houseNumber withBAG:(BOOL)bag success:(void (^)(id responseObject))success
+                           failure:(void (^)(NSError *error))failure;
 {
-	[self makeAPICall:postcode withHouseNumber:houseNumber withLatLong:nil withBAG:bag];
+	[self makeAPICall:postcode withHouseNumber:houseNumber withLatLong:nil withBAG:bag success:success failure:failure];
 }
-- (void)requestWGS84WithLatLong:(CLLocation *)latlong withBAG:(BOOL)bag;
+- (void)requestWGS84WithLatLong:(CLLocation *)latlong withBAG:(BOOL)bag success:(void (^)(id responseObject))success
+                        failure:(void (^)(NSError *error))failure;
 {
-	[self makeAPICall:nil withHouseNumber:0 withLatLong:latlong withBAG:bag];
+	[self makeAPICall:nil withHouseNumber:0 withLatLong:latlong withBAG:bag success:success failure:failure];
 }
 
-- (void)makeAPICall:(NSString *)postCode withHouseNumber:(NSInteger)houseNumber withLatLong:(CLLocation *)latlong withBAG:(BOOL)bag;
+- (void)makeAPICall:(NSString *)postCode withHouseNumber:(NSInteger)houseNumber withLatLong:(CLLocation *)latlong withBAG:(BOOL)bag success:(void (^)(id responseObject))success
+            failure:(void (^)(NSError *error))failure;
 {
 	NSMutableDictionary *paramObject = [[NSMutableDictionary alloc]init];
 	NSString *path;
@@ -48,8 +52,8 @@
 
 	if (postCode) {
 		postCode = ((postCode) ? postCode : @"");
-		
-        if ([postCode length] == 4) {
+
+		if ([postCode length] == 4) {
 			[paramObject setObject:@"p4" forKey:@"type"];
 			classToParse = [P4PostcodeResponse class];
 		} else if ([postCode length] == 5) {
@@ -74,10 +78,10 @@
 		path = [NSString stringWithFormat:@"%@/%f,%f", @"wgs84", latlong.coordinate.latitude, latlong.coordinate.longitude];
 		classToParse = [WGS84Response class];
 	}
-    
-    if(bag) {
-        [paramObject setObject:@"bag" forKey:@"view"];
-    }
+
+	if (bag) {
+		[paramObject setObject:@"bag" forKey:@"view"];
+	}
 
 	NSLog(@"paramObject: %@", paramObject);
 
@@ -91,10 +95,10 @@
 	                           success: ^(id result) {
 	    PostcodeResponse *po = [result objectForKey:@"result"];
 	    NSLog(@"PostCodeAPI: %@", po);
-	    [[NSNotificationCenter defaultCenter] postNotificationName:kResultNotification object:self userInfo:result];
+	    success(po);
 	} failure: ^(NSError *error) {
 	    NSLog(@"PostCodeAPI: Failure result %@", [error description]);
-	    [[NSNotificationCenter defaultCenter] postNotificationName:kErrorNotification object:self userInfo:@{ @"error":error }];
+	    failure(error);
 	}];
 }
 

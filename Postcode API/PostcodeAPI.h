@@ -17,8 +17,13 @@
 @property (nonatomic, strong) NSString *apiKey;
 @property (nonatomic, strong) SDKAPIManager *apiManager;
 - (id)initWithAPIKey:(NSString *)apikey;
-- (void)requestAddressWithPostcode:(NSString *)postcode withBAG:(BOOL)bag;
-- (void)requestAddressWithPostcode:(NSString *)postcode withHouseNumber:(NSInteger)houseNumber withBAG:(BOOL)bag;
-- (void)requestWGS84WithLatLong:(CLLocation *)latlong withBAG:(BOOL)bag;
+- (void)requestAddressWithPostcode:(NSString *)postcode withBAG:(BOOL)bag success:(void (^)(id responseObject))success
+                           failure:(void (^)(NSError *error))failure;
+
+- (void)requestAddressWithPostcode:(NSString *)postcode withHouseNumber:(NSInteger)houseNumber withBAG:(BOOL)bag success:(void (^)(id responseObject))success
+                           failure:(void (^)(NSError *error))failure;
+
+- (void)requestWGS84WithLatLong:(CLLocation *)latlong withBAG:(BOOL)bag success:(void (^)(id responseObject))success
+                        failure:(void (^)(NSError *error))failure;
 
 @end

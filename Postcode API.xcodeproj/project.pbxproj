@@ -30,6 +30,7 @@
 		B8996D521924F79600693586 /* PostcodeAPIConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B8996D511924F79600693586 /* PostcodeAPIConstants.m */; };
 		B8996D561924F9AF00693586 /* PostcodeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = B8996D551924F9AF00693586 /* PostcodeAPI.m */; };
 		B8996D59192500AA00693586 /* PostcodeResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B8996D58192500AA00693586 /* PostcodeResponse.m */; };
+		B8AF134919339EE7002415FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B8AF134819339EE7002415FB /* README.md */; };
 		FAB1AA0383B64278AD7BC4E5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D915614F7F4CA9A7C6BDE9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		B8996D551924F9AF00693586 /* PostcodeAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostcodeAPI.m; sourceTree = "<group>"; };
 		B8996D57192500AA00693586 /* PostcodeResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostcodeResponse.h; path = API/PostcodeResponse.h; sourceTree = "<group>"; };
 		B8996D58192500AA00693586 /* PostcodeResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostcodeResponse.m; path = API/PostcodeResponse.m; sourceTree = "<group>"; };
+		B8AF134819339EE7002415FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		C67F24F344D840068A7D6E90 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 				B815604F1924EC6000A15CD9 /* Main.storyboard */,
 				B81560521924EC6000A15CD9 /* SDKViewController.h */,
 				B81560531924EC6000A15CD9 /* SDKViewController.m */,
+				B8AF134819339EE7002415FB /* README.md */,
 				B81560551924EC6000A15CD9 /* Images.xcassets */,
 				B81560441924EC6000A15CD9 /* Supporting Files */,
 			);
@@ -302,6 +305,7 @@
 			files = (
 				B81560561924EC6000A15CD9 /* Images.xcassets in Resources */,
 				B81560481924EC6000A15CD9 /* InfoPlist.strings in Resources */,
+				B8AF134919339EE7002415FB /* README.md in Resources */,
 				B81560511924EC6000A15CD9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

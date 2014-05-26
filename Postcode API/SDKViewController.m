@@ -10,7 +10,6 @@
 #import "SDKAPIManager.h"
 #import "PostcodeAPI.h"
 #import <CoreLocation/CoreLocation.h>
-#import "AFNetworkActivityLogger.h"
 
 // Helper Classes
 #import "PostcodeResponse.h"
@@ -26,30 +25,37 @@
 {
 	[super viewDidLoad];
 
-	[[AFNetworkActivityLogger sharedLogger] startLogging];
-	[[AFNetworkActivityLogger sharedLogger] setLevel:AFLoggerLevelDebug];
-
 	CLLocationDegrees lat = 51.5664;
 	CLLocationDegrees lon = 5.07718;
 	CLLocation *fakeLocation = [[CLLocation alloc] initWithLatitude:lat longitude:lon];
 
-	PostcodeAPI *pc = [[PostcodeAPI alloc] initWithAPIKey:@"[Your API Key here]"];
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotResult:) name:kResultNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotError:) name:kErrorNotification object:nil];
-//	[pc requestAddressWithPostcode:@"1021NG" withBAG:YES];
-//    [pc requestAddressWithPostcode:@"1021NG" withHouseNumber:58 withBAG:YES];
-    [pc requestWGS84WithLatLong:fakeLocation withBAG:YES];
-}
+	PostcodeAPI *pc = [[PostcodeAPI alloc] initWithAPIKey:@"[Insert your API key]"];
+    
+	[pc requestAddressWithPostcode:@"1021NG" withBAG:YES
+                           success: ^(id responseObject) {
+                                PostcodeResponse *po = responseObject;
+                                NSLog(@"po.description: %@", po);
+                        } failure: ^(NSError *error) {
+                                NSLog(@"Error: %@", error);
+                        }];
+    
+	[pc requestAddressWithPostcode:@"1021NG" withHouseNumber:58 withBAG:YES
+	                       success: ^(id responseObject) {
+                                PostcodeResponse *po = responseObject;
+                                NSLog(@"po.description: %@", po);
+                        } failure: ^(NSError *error) {
+                                NSLog(@"Error: %@", error);
+                            }];
 
-- (void)gotResult:(NSNotification *)notification
-{
-	PostcodeResponse *po = notification.userInfo[kParseResultObject];
-	NSLog(@"po.description: %@", po);
-}
+    [pc requestWGS84WithLatLong:fakeLocation withBAG:YES
+                        success:^(id responseObject) {
+                            PostcodeResponse *po = responseObject;
+                            NSLog(@"po.description: %@", po);
+                        } failure:^(NSError *error) {
+                            NSLog(@"Error: %@", error);
+                            
+                        }];
 
-- (void)gotError:(NSNotification *)notification
-{
-	NSLog(@"Error: %@", notification.userInfo[kParseErrorObject]);
 }
 
 @end
