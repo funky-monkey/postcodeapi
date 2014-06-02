@@ -26,9 +26,6 @@
 {
 	[super viewDidLoad];
     
-    [[AFNetworkActivityLogger sharedLogger] startLogging];
-	[[AFNetworkActivityLogger sharedLogger] setLevel:AFLoggerLevelDebug];
-
 	CLLocationDegrees lat = 51.5664;
 	CLLocationDegrees lon = 5.07718;
 	CLLocation *fakeLocation = [[CLLocation alloc] initWithLatitude:lat longitude:lon];
