@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Funky Monkey. All rights reserved.
 //
 
-#import "P4PostcodeResponse.h"
+#import "SDKP4PostcodeResponse.h"
 
-@implementation P4PostcodeResponse
+@implementation SDKP4PostcodeResponse
 
 - (id)parseData:(NSDictionary *)parseDataDict
 {
@@ -22,6 +22,11 @@
    	self.success = [parseDataDict[@"success"] boolValue];
 	self.error = (parseDataDict[@"resource"][@"error"] ? : [NSNull null]);
 	self.responseCode = [parseDataDict[@"resource"][@"code"] intValue];
+    
+    if(parseDataDict[@"resource"][@"bag"]) {
+        self.bag = [[SDKPostcodeBAG alloc] init];
+        [self.bag parseData:parseDataDict];
+    }
     
 	return self;
 }

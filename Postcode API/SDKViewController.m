@@ -8,12 +8,13 @@
 
 #import "SDKViewController.h"
 #import "SDKAPIManager.h"
-#import "PostcodeAPI.h"
+#import "SDKPostcodeAPI.h"
 #import <CoreLocation/CoreLocation.h>
 
 // Helper Classes
-#import "PostcodeResponse.h"
-#import "PostcodeAPIConstants.h"
+#import "AFNetworkActivityLogger.h"
+#import "SDKPostcodeResponse.h"
+#import "SDKPostcodeAPIConstants.h"
 
 @interface SDKViewController ()
 
@@ -24,36 +25,35 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
+    
+    [[AFNetworkActivityLogger sharedLogger] startLogging];
+	[[AFNetworkActivityLogger sharedLogger] setLevel:AFLoggerLevelDebug];
 
 	CLLocationDegrees lat = 51.5664;
 	CLLocationDegrees lon = 5.07718;
 	CLLocation *fakeLocation = [[CLLocation alloc] initWithLatitude:lat longitude:lon];
 
-	PostcodeAPI *pc = [[PostcodeAPI alloc] initWithAPIKey:@"[Insert your API key]"];
+	SDKPostcodeAPI *pc = [[SDKPostcodeAPI alloc] initWithAPIKey:@"[Your API key goes here]"];
     
 	[pc requestAddressWithPostcode:@"1021NG" withBAG:YES
-                           success: ^(id responseObject) {
-                                PostcodeResponse *po = responseObject;
-                                NSLog(@"po.description: %@", po);
-                        } failure: ^(NSError *error) {
-                                NSLog(@"Error: %@", error);
-                        }];
-    
+                           success: ^(SDKPostcodeResponse *responseObject) {
+                                // Returns an PostcodeResponse
+                            } failure: ^(NSError *error) {
+                                // Handle error here.
+                            }];
+
 	[pc requestAddressWithPostcode:@"1021NG" withHouseNumber:58 withBAG:YES
-	                       success: ^(id responseObject) {
-                                PostcodeResponse *po = responseObject;
-                                NSLog(@"po.description: %@", po);
-                        } failure: ^(NSError *error) {
-                                NSLog(@"Error: %@", error);
+	                       success: ^(SDKPostcodeResponse *responseObject) {
+                                // Returns an PostcodeResponse
+                            } failure: ^(NSError *error) {
+                                // Handle error here.
                             }];
 
     [pc requestWGS84WithLatLong:fakeLocation withBAG:YES
-                        success:^(id responseObject) {
-                            PostcodeResponse *po = responseObject;
-                            NSLog(@"po.description: %@", po);
+                        success:^(SDKPostcodeResponse *responseObject) {
+                            // Returns an PostcodeResponse
                         } failure:^(NSError *error) {
-                            NSLog(@"Error: %@", error);
-                            
+                            // Handle error here.
                         }];
 
 }

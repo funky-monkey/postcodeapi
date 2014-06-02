@@ -6,11 +6,9 @@
 //  Copyright (c) 2014 Funky Monkey. All rights reserved.
 //
 
-#import "WGS84Response.h"
-#import "PostcodeBAG.h"
+#import "SDKWGS84Response.h"
+#import "SDKPostcodeBAG.h"
 
-@interface AdresResponse : WGS84Response
-
-@property (nonatomic, assign) PostcodeBAG *BAG;
+@interface SDKAdresResponse : SDKWGS84Response
 
 @end

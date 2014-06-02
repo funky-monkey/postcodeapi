@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SDKParsingProtocol.h"
 
-@interface PostcodeBAG : NSObject
+@interface SDKPostcodeBAG : NSObject <SDKParsingProtocol>
 
 @property (nonatomic) float bagID;
 @property (nonatomic) NSString *bagType;
 @property (nonatomic) NSString *bagPurpose;
 
-- (id)initWithParseData:(NSDictionary *)parseDataDict;
+- (id)parseData:(NSDictionary *)parseDataDict;
 
 @end

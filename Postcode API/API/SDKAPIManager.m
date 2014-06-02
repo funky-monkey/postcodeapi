@@ -8,7 +8,7 @@
 
 #import "SDKAPIManager.h"
 #import "SDKParser.h"
-#import "PostcodeAPIConstants.h"
+#import "SDKPostcodeAPIConstants.h"
 
 // AFnetworking
 #import "AFNetworking.h"
@@ -42,6 +42,7 @@
 		[manager  POST:fullURL
 		    parameters:params
 		       success: ^(AFHTTPRequestOperation *operation, id JSON) {
+                   NSLog(@"RAW JSON Data: %@", JSON);
 		    success([SDKParser parseResultWithData:JSON dataClass:ctm]);
 		}
 

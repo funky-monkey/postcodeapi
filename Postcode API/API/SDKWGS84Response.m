@@ -1,14 +1,14 @@
 //
-//  PostcodeResponse.m
+//  WGS84Response.m
 //  Postcode API
 //
-//  Created by Sidney de Koning on 15/05/14.
+//  Created by Sidney de Koning on 16/05/14.
 //  Copyright (c) 2014 Funky Monkey. All rights reserved.
 //
 
-#import "PostcodeResponse.h"
+#import "SDKWGS84Response.h"
 
-@implementation PostcodeResponse
+@implementation SDKWGS84Response
 
 - (id)parseData:(NSDictionary *)parseDataDict
 {
@@ -16,7 +16,10 @@
 
 	self.postcode = parseDataDict[@"resource"][@"postcode"];
 	self.street = parseDataDict[@"resource"][@"street"];
-
+	self.houseNumber = [parseDataDict[@"resource"][@"house_number"] intValue];
+	self.town = parseDataDict[@"resource"][@"town"];
+    
+    
 	return self;
 }
 

@@ -10,9 +10,9 @@
 
 // Helper Classes
 #import "SDKParsingProtocol.h"
-#import "P4PostcodeResponse.h"
+#import "SDKP4PostcodeResponse.h"
 
-@interface PostcodeResponse : P4PostcodeResponse <SDKParsingProtocol>
+@interface SDKPostcodeResponse : SDKP4PostcodeResponse <SDKParsingProtocol>
 
 @property (nonatomic, assign) NSString *postcode;
 @property (nonatomic, assign) NSString *street;

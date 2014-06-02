@@ -10,6 +10,6 @@
 
 @protocol SDKParsingProtocol <NSObject>
 
--(id) parseData:(NSDictionary *) parseDataDict;
+- (id)parseData:(NSDictionary *)parseDataDict;
 
 @end

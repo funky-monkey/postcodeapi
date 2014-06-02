@@ -23,14 +23,13 @@
 		B81560691924EC6000A15CD9 /* Postcode_APITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B81560681924EC6000A15CD9 /* Postcode_APITests.m */; };
 		B81560791924EDE800A15CD9 /* SDKAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B81560731924EDE800A15CD9 /* SDKAPIManager.m */; };
 		B815607B1924EDE800A15CD9 /* SDKParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B81560771924EDE800A15CD9 /* SDKParser.m */; };
-		B88710741926565F004F96CD /* P4PostcodeResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B88710731926565F004F96CD /* P4PostcodeResponse.m */; };
-		B8871077192659D2004F96CD /* WGS84Response.m in Sources */ = {isa = PBXBuildFile; fileRef = B8871076192659D2004F96CD /* WGS84Response.m */; };
-		B887107A19265BE6004F96CD /* AdresResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B887107919265BE6004F96CD /* AdresResponse.m */; };
-		B887107D19265CAA004F96CD /* PostcodeBAG.m in Sources */ = {isa = PBXBuildFile; fileRef = B887107C19265CAA004F96CD /* PostcodeBAG.m */; };
-		B8996D521924F79600693586 /* PostcodeAPIConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B8996D511924F79600693586 /* PostcodeAPIConstants.m */; };
-		B8996D561924F9AF00693586 /* PostcodeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = B8996D551924F9AF00693586 /* PostcodeAPI.m */; };
-		B8996D59192500AA00693586 /* PostcodeResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B8996D58192500AA00693586 /* PostcodeResponse.m */; };
-		B8AF134919339EE7002415FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B8AF134819339EE7002415FB /* README.md */; };
+		B88710741926565F004F96CD /* SDKP4PostcodeResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B88710731926565F004F96CD /* SDKP4PostcodeResponse.m */; };
+		B8871077192659D2004F96CD /* SDKWGS84Response.m in Sources */ = {isa = PBXBuildFile; fileRef = B8871076192659D2004F96CD /* SDKWGS84Response.m */; };
+		B887107A19265BE6004F96CD /* SDKAdresResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B887107919265BE6004F96CD /* SDKAdresResponse.m */; };
+		B887107D19265CAA004F96CD /* SDKPostcodeBAG.m in Sources */ = {isa = PBXBuildFile; fileRef = B887107C19265CAA004F96CD /* SDKPostcodeBAG.m */; };
+		B8996D521924F79600693586 /* SDKPostcodeAPIConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B8996D511924F79600693586 /* SDKPostcodeAPIConstants.m */; };
+		B8996D561924F9AF00693586 /* SDKPostcodeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = B8996D551924F9AF00693586 /* SDKPostcodeAPI.m */; };
+		B8996D59192500AA00693586 /* SDKPostcodeResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B8996D58192500AA00693586 /* SDKPostcodeResponse.m */; };
 		FAB1AA0383B64278AD7BC4E5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D915614F7F4CA9A7C6BDE9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -70,21 +69,20 @@
 		B81560761924EDE800A15CD9 /* SDKParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDKParser.h; path = API/SDKParser.h; sourceTree = "<group>"; };
 		B81560771924EDE800A15CD9 /* SDKParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDKParser.m; path = API/SDKParser.m; sourceTree = "<group>"; };
 		B81560781924EDE800A15CD9 /* SDKParsingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDKParsingProtocol.h; path = API/SDKParsingProtocol.h; sourceTree = "<group>"; };
-		B88710721926565F004F96CD /* P4PostcodeResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = P4PostcodeResponse.h; path = API/P4PostcodeResponse.h; sourceTree = "<group>"; };
-		B88710731926565F004F96CD /* P4PostcodeResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = P4PostcodeResponse.m; path = API/P4PostcodeResponse.m; sourceTree = "<group>"; };
-		B8871075192659D2004F96CD /* WGS84Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WGS84Response.h; path = API/WGS84Response.h; sourceTree = "<group>"; };
-		B8871076192659D2004F96CD /* WGS84Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WGS84Response.m; path = API/WGS84Response.m; sourceTree = "<group>"; };
-		B887107819265BE6004F96CD /* AdresResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdresResponse.h; path = API/AdresResponse.h; sourceTree = "<group>"; };
-		B887107919265BE6004F96CD /* AdresResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdresResponse.m; path = API/AdresResponse.m; sourceTree = "<group>"; };
-		B887107B19265CAA004F96CD /* PostcodeBAG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostcodeBAG.h; sourceTree = "<group>"; };
-		B887107C19265CAA004F96CD /* PostcodeBAG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostcodeBAG.m; sourceTree = "<group>"; };
-		B8996D501924F79600693586 /* PostcodeAPIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostcodeAPIConstants.h; path = API/PostcodeAPIConstants.h; sourceTree = "<group>"; };
-		B8996D511924F79600693586 /* PostcodeAPIConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostcodeAPIConstants.m; path = API/PostcodeAPIConstants.m; sourceTree = "<group>"; };
-		B8996D541924F9AF00693586 /* PostcodeAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostcodeAPI.h; sourceTree = "<group>"; };
-		B8996D551924F9AF00693586 /* PostcodeAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostcodeAPI.m; sourceTree = "<group>"; };
-		B8996D57192500AA00693586 /* PostcodeResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostcodeResponse.h; path = API/PostcodeResponse.h; sourceTree = "<group>"; };
-		B8996D58192500AA00693586 /* PostcodeResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostcodeResponse.m; path = API/PostcodeResponse.m; sourceTree = "<group>"; };
-		B8AF134819339EE7002415FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		B88710721926565F004F96CD /* SDKP4PostcodeResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDKP4PostcodeResponse.h; path = API/SDKP4PostcodeResponse.h; sourceTree = "<group>"; };
+		B88710731926565F004F96CD /* SDKP4PostcodeResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDKP4PostcodeResponse.m; path = API/SDKP4PostcodeResponse.m; sourceTree = "<group>"; };
+		B8871075192659D2004F96CD /* SDKWGS84Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDKWGS84Response.h; path = API/SDKWGS84Response.h; sourceTree = "<group>"; };
+		B8871076192659D2004F96CD /* SDKWGS84Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDKWGS84Response.m; path = API/SDKWGS84Response.m; sourceTree = "<group>"; };
+		B887107819265BE6004F96CD /* SDKAdresResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDKAdresResponse.h; path = API/SDKAdresResponse.h; sourceTree = "<group>"; };
+		B887107919265BE6004F96CD /* SDKAdresResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDKAdresResponse.m; path = API/SDKAdresResponse.m; sourceTree = "<group>"; };
+		B887107B19265CAA004F96CD /* SDKPostcodeBAG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDKPostcodeBAG.h; sourceTree = "<group>"; };
+		B887107C19265CAA004F96CD /* SDKPostcodeBAG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDKPostcodeBAG.m; sourceTree = "<group>"; };
+		B8996D501924F79600693586 /* SDKPostcodeAPIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDKPostcodeAPIConstants.h; path = API/SDKPostcodeAPIConstants.h; sourceTree = "<group>"; };
+		B8996D511924F79600693586 /* SDKPostcodeAPIConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDKPostcodeAPIConstants.m; path = API/SDKPostcodeAPIConstants.m; sourceTree = "<group>"; };
+		B8996D541924F9AF00693586 /* SDKPostcodeAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDKPostcodeAPI.h; sourceTree = "<group>"; };
+		B8996D551924F9AF00693586 /* SDKPostcodeAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDKPostcodeAPI.m; sourceTree = "<group>"; };
+		B8996D57192500AA00693586 /* SDKPostcodeResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDKPostcodeResponse.h; path = API/SDKPostcodeResponse.h; sourceTree = "<group>"; };
+		B8996D58192500AA00693586 /* SDKPostcodeResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDKPostcodeResponse.m; path = API/SDKPostcodeResponse.m; sourceTree = "<group>"; };
 		C67F24F344D840068A7D6E90 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,7 +152,6 @@
 				B815604F1924EC6000A15CD9 /* Main.storyboard */,
 				B81560521924EC6000A15CD9 /* SDKViewController.h */,
 				B81560531924EC6000A15CD9 /* SDKViewController.m */,
-				B8AF134819339EE7002415FB /* README.md */,
 				B81560551924EC6000A15CD9 /* Images.xcassets */,
 				B81560441924EC6000A15CD9 /* Supporting Files */,
 			);
@@ -193,11 +190,11 @@
 		B815607C1924EDF300A15CD9 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				B8996D541924F9AF00693586 /* PostcodeAPI.h */,
-				B8996D551924F9AF00693586 /* PostcodeAPI.m */,
+				B8996D541924F9AF00693586 /* SDKPostcodeAPI.h */,
+				B8996D551924F9AF00693586 /* SDKPostcodeAPI.m */,
 				B8996D5A192500C700693586 /* DTO */,
-				B8996D501924F79600693586 /* PostcodeAPIConstants.h */,
-				B8996D511924F79600693586 /* PostcodeAPIConstants.m */,
+				B8996D501924F79600693586 /* SDKPostcodeAPIConstants.h */,
+				B8996D511924F79600693586 /* SDKPostcodeAPIConstants.m */,
 				B81560721924EDE800A15CD9 /* SDKAPIManager.h */,
 				B81560731924EDE800A15CD9 /* SDKAPIManager.m */,
 				B81560761924EDE800A15CD9 /* SDKParser.h */,
@@ -210,16 +207,16 @@
 		B8996D5A192500C700693586 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				B88710721926565F004F96CD /* P4PostcodeResponse.h */,
-				B88710731926565F004F96CD /* P4PostcodeResponse.m */,
-				B8996D57192500AA00693586 /* PostcodeResponse.h */,
-				B8996D58192500AA00693586 /* PostcodeResponse.m */,
-				B8871075192659D2004F96CD /* WGS84Response.h */,
-				B8871076192659D2004F96CD /* WGS84Response.m */,
-				B887107819265BE6004F96CD /* AdresResponse.h */,
-				B887107919265BE6004F96CD /* AdresResponse.m */,
-				B887107B19265CAA004F96CD /* PostcodeBAG.h */,
-				B887107C19265CAA004F96CD /* PostcodeBAG.m */,
+				B88710721926565F004F96CD /* SDKP4PostcodeResponse.h */,
+				B88710731926565F004F96CD /* SDKP4PostcodeResponse.m */,
+				B8996D57192500AA00693586 /* SDKPostcodeResponse.h */,
+				B8996D58192500AA00693586 /* SDKPostcodeResponse.m */,
+				B8871075192659D2004F96CD /* SDKWGS84Response.h */,
+				B8871076192659D2004F96CD /* SDKWGS84Response.m */,
+				B887107819265BE6004F96CD /* SDKAdresResponse.h */,
+				B887107919265BE6004F96CD /* SDKAdresResponse.m */,
+				B887107B19265CAA004F96CD /* SDKPostcodeBAG.h */,
+				B887107C19265CAA004F96CD /* SDKPostcodeBAG.m */,
 			);
 			name = DTO;
 			sourceTree = "<group>";
@@ -305,7 +302,6 @@
 			files = (
 				B81560561924EC6000A15CD9 /* Images.xcassets in Resources */,
 				B81560481924EC6000A15CD9 /* InfoPlist.strings in Resources */,
-				B8AF134919339EE7002415FB /* README.md in Resources */,
 				B81560511924EC6000A15CD9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,17 +354,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8996D59192500AA00693586 /* PostcodeResponse.m in Sources */,
+				B8996D59192500AA00693586 /* SDKPostcodeResponse.m in Sources */,
 				B815604A1924EC6000A15CD9 /* main.m in Sources */,
-				B8871077192659D2004F96CD /* WGS84Response.m in Sources */,
-				B887107D19265CAA004F96CD /* PostcodeBAG.m in Sources */,
+				B8871077192659D2004F96CD /* SDKWGS84Response.m in Sources */,
+				B887107D19265CAA004F96CD /* SDKPostcodeBAG.m in Sources */,
 				B81560541924EC6000A15CD9 /* SDKViewController.m in Sources */,
 				B815604E1924EC6000A15CD9 /* SDKAppDelegate.m in Sources */,
-				B8996D561924F9AF00693586 /* PostcodeAPI.m in Sources */,
+				B8996D561924F9AF00693586 /* SDKPostcodeAPI.m in Sources */,
 				B81560791924EDE800A15CD9 /* SDKAPIManager.m in Sources */,
-				B8996D521924F79600693586 /* PostcodeAPIConstants.m in Sources */,
-				B887107A19265BE6004F96CD /* AdresResponse.m in Sources */,
-				B88710741926565F004F96CD /* P4PostcodeResponse.m in Sources */,
+				B8996D521924F79600693586 /* SDKPostcodeAPIConstants.m in Sources */,
+				B887107A19265BE6004F96CD /* SDKAdresResponse.m in Sources */,
+				B88710741926565F004F96CD /* SDKP4PostcodeResponse.m in Sources */,
 				B815607B1924EDE800A15CD9 /* SDKParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

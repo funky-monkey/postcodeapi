@@ -10,8 +10,9 @@
 
 // Helper Classes
 #import "SDKParsingProtocol.h"
+#import "SDKPostcodeBAG.h"
 
-@interface P4PostcodeResponse : NSObject <SDKParsingProtocol>
+@interface SDKP4PostcodeResponse : NSObject <SDKParsingProtocol>
 
 @property (nonatomic) float latitude;
 @property (nonatomic) float longitude;
@@ -24,6 +25,7 @@
 @property (nonatomic) BOOL success;
 @property (nonatomic, assign) NSString *error;
 @property (nonatomic, assign) NSInteger responseCode;
+@property (nonatomic, strong) SDKPostcodeBAG *bag;
 
 - (NSString *)description;
 

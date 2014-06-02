@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Funky Monkey. All rights reserved.
 //
 
-#import "AdresResponse.h"
+#import "SDKAdresResponse.h"
 
-@implementation AdresResponse
+@implementation SDKAdresResponse
 
 - (id)parseData:(NSDictionary *)parseDataDict
 {
